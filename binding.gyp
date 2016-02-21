@@ -8,6 +8,7 @@
       'conditions': [
         ['OS=="mac"', {
           'sources': [ 'lib/kerberos.cc', 'lib/worker.cc', 'lib/kerberosgss.c', 'lib/base64.c', 'lib/kerberos_context.cc' ],
+           'include_dirs': [ '<!(node -e "require(\'nan\')")', '/System/Library/Frameworks/Kerberos.framework/Versions/A/Headers' ],
           'defines': [
             '__MACOSX_CORE__'
           ],
